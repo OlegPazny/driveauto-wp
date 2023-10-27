@@ -138,11 +138,17 @@ add_action( 'widgets_init', 'empty_widgets_init' );
  * Enqueue scripts and styles.
  */
 function empty_scripts() {
-	wp_enqueue_style( 'empty-style', get_stylesheet_uri(), array(), _S_VERSION );
+	// wp_enqueue_style( 'empty-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/styles.css');
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/index.css');
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/finance_programs.css');
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/in_stock.css');
 	wp_style_add_data( 'empty-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'empty-navigation', get_template_directory_uri() . '/js/script.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'empty-navigation', get_template_directory_uri() . '/js/slider.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'empty-navigation', get_template_directory_uri() . '/js/cards.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'empty-navigation', get_template_directory_uri() . '/js/filters.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -175,5 +181,9 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
-}
+};
+remove_filter('the_content', 'wpautop');
 
+remove_filter('the_excerpt', 'wpautop');
+
+remove_filter('comment_text', 'wpautop');

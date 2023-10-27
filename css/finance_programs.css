@@ -1,0 +1,92 @@
+body{
+    background-color: #f5f5f5;
+}
+.breadcrumbs{
+    padding:0.4%;
+    box-shadow: 0px 1px 1px 1px #00000025;
+    margin-bottom: 2%;
+}
+section{
+    margin-left:12%;
+    margin-right: 12%;
+    margin-top:2%;
+}
+.head{
+    font-size: 38px;
+    font-weight: lighter;
+    margin-bottom: 5%;
+}
+
+.programs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.program{
+    display: flex;
+    flex-direction: column;
+}
+.program:nth-child(1){
+    margin-bottom:10%;
+}
+.button{
+    width:fit-content;
+    padding:10px 50px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.program a{
+    align-self: flex-end;
+    margin-top:3%;
+}
+.program:nth-child(1) .button{
+    border:1px solid #37a240;
+    background-color: #3EB647;
+    transition:0.5s ease-in-out;
+}
+.program:nth-child(1) .button:hover p{
+    color: #3EB647;
+    transition:0.5s ease-in-out;
+}
+.program:nth-child(2) .button{
+    border:1px solid #d10000;
+    background-color: #FF0000;
+    transition:0.5s ease-in-out;
+}
+.program:nth-child(2) .button:hover p{
+    color: #FF0000;
+    transition:0.5s ease-in-out;
+}
+.program .button:hover{
+    background-color: transparent;
+    transition:0.5s ease-in-out;
+}
+
+.button p{
+    color:#ffffff;
+    font-size: 22px;
+    transition:0.5s ease-in-out;
+}
+
+.program img{
+    width:100%;
+}
+
+@media (max-width:412px){
+    .head{
+        margin-top:5%;
+        font-weight: bold;
+        font-size:20px;
+    }
+    .program a{
+        margin-top:5%;
+    }
+    .button{
+        padding:5px 20px;
+    }
+    .button p{
+        font-size:14px;
+        font-weight: bold;
+
+    }
+}
