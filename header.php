@@ -12,8 +12,15 @@
 		<script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 		<!-- Google fonts-->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Ubuntu&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
 		<!-- Core theme CSS (includes Bootstrap)-->
+		<link href="<?php echo(get_template_directory_uri()); ?>/css/styles.css" rel="stylesheet" type="text/css" />
+		<link href="<?php echo(get_template_directory_uri()); ?>/css/index.css" rel="stylesheet" type="text/css" />
+		<link href="<?php echo(get_template_directory_uri()); ?>/css/finance_programs.css" rel="stylesheet" type="text/css" />
+		<link href="<?php echo(get_template_directory_uri()); ?>/css/in_stock.css" rel="stylesheet" type="text/css" />
 		<?php wp_head();?>
 	</head>
 	<body id="page-top">
